@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,102 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw7-Ww-GLz">
+                                <rect key="frame" x="7.5" y="28" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.18430213730569944" green="0.11303591349666633" blue="0.11854177973067025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fw7-Ww-GLz" secondAttribute="height" multiplier="1:1" id="u58-44-b7p"/>
+                                    <constraint firstAttribute="width" constant="120" id="w85-YH-ELF"/>
+                                </constraints>
+                                <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="call:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fo-uh-BRs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spn-cz-pOt">
+                                <rect key="frame" x="127.5" y="28" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.27250647668393779" green="0.16508771072681885" blue="0.1719330017701379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Spn-cz-pOt" secondAttribute="height" multiplier="1:1" id="0Uq-7O-BVf"/>
+                                </constraints>
+                                <state key="normal" title="SMS"/>
+                                <connections>
+                                    <action selector="SMS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVz-jR-A0R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUW-r2-kRT">
+                                <rect key="frame" x="247.5" y="28" width="120" height="120"/>
+                                <color key="backgroundColor" red="0.32367227979274615" green="0.19608457144557992" blue="0.20421513400980734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VUW-r2-kRT" secondAttribute="height" multiplier="1:1" id="093-Cx-Ktu"/>
+                                </constraints>
+                                <state key="normal" title="Notify Me"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQm-nb-d2I">
+                                <rect key="frame" x="58" y="198" width="259" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SMS to" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7VH-Xx-iFm">
+                                <rect key="frame" x="58" y="255" width="259" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reminder About" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ue1-3F-F65">
+                                <rect key="frame" x="58" y="312" width="259" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Reminder Message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aKI-Ei-UKG">
+                                <rect key="frame" x="58" y="369" width="259" height="111"/>
+                                <color key="backgroundColor" red="0.99439362046632129" green="0.66258221307110909" blue="0.56459446800013868" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="l6t-Nw-hxx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Spn-cz-pOt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2bk-c8-6d5"/>
+                            <constraint firstItem="rQm-nb-d2I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="7XL-S6-YLK"/>
+                            <constraint firstItem="ue1-3F-F65" firstAttribute="trailing" secondItem="7VH-Xx-iFm" secondAttribute="trailing" id="9pl-ia-0Er"/>
+                            <constraint firstItem="7VH-Xx-iFm" firstAttribute="leading" secondItem="rQm-nb-d2I" secondAttribute="leading" id="BGf-iE-gPJ"/>
+                            <constraint firstItem="Fw7-Ww-GLz" firstAttribute="width" secondItem="Spn-cz-pOt" secondAttribute="width" id="CVF-YU-Mzc"/>
+                            <constraint firstItem="VUW-r2-kRT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Gf6-T9-ynr"/>
+                            <constraint firstItem="VUW-r2-kRT" firstAttribute="width" secondItem="Spn-cz-pOt" secondAttribute="width" id="OGK-ZV-z6e"/>
+                            <constraint firstItem="7VH-Xx-iFm" firstAttribute="trailing" secondItem="rQm-nb-d2I" secondAttribute="trailing" id="OZt-No-YnA"/>
+                            <constraint firstItem="VUW-r2-kRT" firstAttribute="leading" secondItem="Spn-cz-pOt" secondAttribute="trailing" id="QhM-GW-cWM"/>
+                            <constraint firstItem="aKI-Ei-UKG" firstAttribute="trailing" secondItem="ue1-3F-F65" secondAttribute="trailing" id="R4s-Mt-l34"/>
+                            <constraint firstItem="ue1-3F-F65" firstAttribute="top" secondItem="7VH-Xx-iFm" secondAttribute="bottom" constant="27" id="aIv-UL-Cd8"/>
+                            <constraint firstItem="ue1-3F-F65" firstAttribute="leading" secondItem="7VH-Xx-iFm" secondAttribute="leading" id="abr-st-3JC"/>
+                            <constraint firstItem="rQm-nb-d2I" firstAttribute="top" secondItem="VUW-r2-kRT" secondAttribute="bottom" constant="50" id="b7i-mb-aqR"/>
+                            <constraint firstItem="7VH-Xx-iFm" firstAttribute="top" secondItem="rQm-nb-d2I" secondAttribute="bottom" constant="27" id="cnX-gU-Oah"/>
+                            <constraint firstItem="Spn-cz-pOt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ebe-D6-WNE"/>
+                            <constraint firstItem="Fw7-Ww-GLz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mMc-nG-uFt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rQm-nb-d2I" secondAttribute="trailing" constant="42" id="o9U-8a-HHw"/>
+                            <constraint firstItem="Spn-cz-pOt" firstAttribute="leading" secondItem="Fw7-Ww-GLz" secondAttribute="trailing" id="qJD-bY-nEx"/>
+                            <constraint firstItem="aKI-Ei-UKG" firstAttribute="top" secondItem="ue1-3F-F65" secondAttribute="bottom" constant="27" id="tJg-Gn-Zz4"/>
+                            <constraint firstItem="aKI-Ei-UKG" firstAttribute="leading" secondItem="ue1-3F-F65" secondAttribute="leading" id="wdb-qF-cRd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="SMSTextBox" destination="7VH-Xx-iFm" id="w1W-Hs-BNR"/>
+                        <outlet property="call" destination="Fw7-Ww-GLz" id="6RF-Fc-1Ed"/>
+                        <outlet property="notifyBTN" destination="VUW-r2-kRT" id="pF6-bO-adP"/>
+                        <outlet property="phoneNumberTextBox" destination="rQm-nb-d2I" id="Qgl-Hh-XBc"/>
+                        <outlet property="reminderMessageTextBox" destination="aKI-Ei-UKG" id="Cfh-xH-MTy"/>
+                        <outlet property="reminderTitleTextBox" destination="ue1-3F-F65" id="oVj-qz-Z74"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>

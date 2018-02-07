@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
+
 
 @interface AppDelegate ()
 
@@ -16,7 +18,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
+        
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionBadge + UNAuthorizationOptionCarPlay) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            
+            if (!granted) {
+                
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Pigeons Notifications" message:@"You may not reveive notifications fom Pigeons. You may enable notification from settings." preferredStyle:UIAlertControllerStyleActionSheet];
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                [alertController addAction:okAction];
+                [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+                
+            }
+        }];
+     
+    }
+    //application.applicationIconBadgeNumber = 0;
     return YES;
 }
 
@@ -34,7 +53,7 @@
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    application.applicationIconBadgeNumber = 0;
 }
 
 

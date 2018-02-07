@@ -13,6 +13,7 @@
 		16D7167A202AF0B1000339BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D71678202AF0B1000339BC /* Main.storyboard */; };
 		16D7167C202AF0B1000339BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D7167B202AF0B1000339BC /* Assets.xcassets */; };
 		16D7167F202AF0B1000339BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D7167D202AF0B1000339BC /* LaunchScreen.storyboard */; };
+		16D71688202B0B7D000339BC /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D71687202B0B7D000339BC /* UserNotifications.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		16D7167B202AF0B1000339BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16D7167E202AF0B1000339BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16D71680202AF0B1000339BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D71687202B0B7D000339BC /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D71688202B0B7D000339BC /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				16D7166E202AF0B1000339BC /* Pigeons */,
 				16D7166D202AF0B1000339BC /* Products */,
+				16D71686202B0B7D000339BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +81,14 @@
 				16D71670202AF0B1000339BC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16D71686202B0B7D000339BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16D71687202B0B7D000339BC /* UserNotifications.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +290,7 @@
 				DEVELOPMENT_TEAM = 48GC2PXZGE;
 				INFOPLIST_FILE = Pigeons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = coresparker.Pigeons;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coresparker.goinon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -290,7 +302,7 @@
 				DEVELOPMENT_TEAM = 48GC2PXZGE;
 				INFOPLIST_FILE = Pigeons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = coresparker.Pigeons;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coresparker.goinon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
